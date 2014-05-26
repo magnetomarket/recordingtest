@@ -1,0 +1,16 @@
+C:\Users\Robbie\Recording Test2\platforms\wp8\Bin\Debug\ApplicationIcon.png
+C:\Users\Robbie\Recording Test2\platforms\wp8\Bin\Debug\Background.png
+C:\Users\Robbie\Recording Test2\platforms\wp8\Bin\Debug\com.phonegap.recordingtest.dll
+C:\Users\Robbie\Recording Test2\platforms\wp8\Bin\Debug\com.phonegap.recordingtest.pdb
+C:\Users\Robbie\Recording Test2\platforms\wp8\Bin\Debug\AppManifest.xaml
+C:\Users\Robbie\Recording Test2\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Robbie\Recording Test2\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\App.g.cs
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\Plugins\org.apache.cordova.media-capture\AudioRecorder.g.cs
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\Plugins\org.apache.cordova.media-capture\VideoRecorder.g.cs
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\cordovalib\CordovaView.g.cs
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\MainPage.g.cs
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\com.phonegap.recordingtest.g.resources
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\com.phonegap.recordingtest.dll
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\com.phonegap.recordingtest.pdb
+C:\Users\Robbie\Recording Test2\platforms\wp8\obj\Debug\XapCacheFile.xml

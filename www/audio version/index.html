@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capture Audio</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="json2.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+$.support.cors = true;
+$.mobile.allowCrossDomainPages = true;
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    // Now safe to use the PhoneGap API
+	alert("Device ready!");
+}
+
+
+    // Called when capture operation is finished
+    //
+    function captureSuccess(mediaFiles) {
+        var i, len;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            uploadFile(mediaFiles[i]);
+        }
+    }
+
+    // Called if something bad happens.
+    //
+    function captureError(error) {
+        var msg = 'An error occurred during capture: ' + error.code;
+        //navigator.notification.alert(msg, null, 'Uh oh!');
+	alert(msg);
+    }
+
+    // A button will call this function
+    //
+    function captureAudio() {
+        // Launch device audio recording application,
+        // allowing user to capture up to 1 audio clip
+        navigator.device.capture.captureAudio(captureSuccess, captureError, {limit: 1});
+    }
+
+    // Upload files to server
+    function uploadFile(mediaFile) {
+	var URL = "http://10.0.101.175:57812/api/upload";
+	alert("URL: " + URL);
+	var URLEncoded = encodeURI(URL);
+	//alert("URLEncoded : " + URLEncoded);
+	alert("Uploading file path " + mediaFile.fullPath + " name: " + mediaFile.name + " to URL: " + URL);
+	//alert("Name: " + mediaFile.name);
+        var ft = new FileTransfer(),
+            path = mediaFile.fullPath,
+            name = mediaFile.name;
+
+        ft.upload(path,
+            URL,
+            function(result) {
+                alert('Upload success: ' + result.responseCode);
+                alert(result.bytesSent + ' bytes sent');
+            },
+            function(error) {
+                alert('Error uploading file ' + path + ': ' + error.code);
+            },
+            { fileName: name },
+	    true);
+
+	//KL 5/23/14 - added last param to trust all hosts
+    }
+
+    </script>
+    </head>
+    <body>
+        <button onclick="captureAudio();">Capture Audio</button> <br>
+    </body>
+</html>

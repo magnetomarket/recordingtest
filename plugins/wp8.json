@@ -1,0 +1,73 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"wp-package\" value=\"Camera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"wp-package\" value=\"File\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"wp-package\" value=\"FileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Capture\"><param name=\"wp-package\" value=\"Capture\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_ISV_CAMERA\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_MEDIALIB_PHOTO\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_MEDIALIB_AUDIO\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_MEDIALIB_PLAYBACK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_MICROPHONE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "{3B39977A-70B0-42EB-9A3E-C48BC712AE9B}"
+        },
+        "org.apache.cordova.file": {
+            "PACKAGE_NAME": "{3B39977A-70B0-42EB-9A3E-C48BC712AE9B}"
+        },
+        "org.apache.cordova.file-transfer": {
+            "PACKAGE_NAME": "{3B39977A-70B0-42EB-9A3E-C48BC712AE9B}"
+        },
+        "org.apache.cordova.media-capture": {
+            "PACKAGE_NAME": "{3B39977A-70B0-42EB-9A3E-C48BC712AE9B}"
+        }
+    },
+    "dependent_plugins": {}
+}
